@@ -1,0 +1,1 @@
+A simple landing page with an elegant blur effect when hovering over the background image. Used properties like <b>:hover</b>, <b>::after</b>, <b>::before</b> pseudo classes, <b>transition</b> for smooth effects and <b>grid</b> for page layout. It is fully responsive as I have used <b>@media queries</b> for smaller screens.
