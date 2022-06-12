@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'card1 card1 card2 card5'
+    'card3 card4 card4 card5';
+    align-content: center;
+    gap: 20px 25px;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.card1 {
+    grid-area: card1;
+    background-color: hsl(263, 55%, 52%);
+    position: relative;
+}
+
+.card2 {
+    grid-area: card2;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.card3 {
+    grid-area: card3;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.card4 {
+    grid-area: card4;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.card5 {
+    grid-area: card5;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.card1, .card2, .card3, .card4, .card5 {
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 15px hsl(0, 0%, 81%);
+    padding: 20px 30px;
+}
+
+.quotes {
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    right: 15%;
+    width: 100px;
+}
+
+.card1 .profile, .card1>h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.profile {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.card3 .profile, .card5 .profile {
+    color: hsl(217, 19%, 35%);
+}
+
+.profile>img {
+    border-radius: 100%;
+    width: 30px;
+    border: 1.5px solid none;
+}
+
+.card1 .profile>img {
+    border: 1.5px solid hsl(264, 82%, 70%);
+} 
+
+.card4 .profile>img {
+    border: 1.5px solid hsl(263, 55%, 52%);
+}
+
+.name {
+    font-weight: 600;
+    padding-bottom: 2.5px;
+}
+
+.about {
+    font-size: 11px;
+    opacity: 50%;
+}
+
+.heading {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.114rem;
+    letter-spacing: .25px;
+    line-height: 1.25;
+    padding: 15px 0;
+}
+
+.card3 .heading, .card5 .heading {
+    color: hsl(217, 19%, 35%);
+}
+
+.card3 .heading {
+    width: 80%;
+}
+
+.content {
+    color: hsl(0, 0%, 100%);
+    opacity: 70%;
+}
+
+.card3 .content, .card5 .content {
+    color: hsl(217, 19%, 35%);
+}
+
+@media(max-width:1224px) {
+    .container {
+        width: 90%;
+    }
+
+    .card1, .card2, .card3, .card4, .card5 {
+        padding: 20px 25px;
+    }
+
+    .heading {
+        font-size: 1rem;
+    }
+
+    .content {
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 960px) {
+    .container {
+        width: 95%;
+        gap: 20px;
+    }
+
+    .card1, .card2, .card3, .card4, .card5 {
+        padding: 20px 15px;
+    }
+
+    .card3 .heading {
+        width: 100%;
+    }
+
+    .content {
+        font-size: 0.75rem;
+    }
+} 
+
+@media(max-width: 792px) {
+    .container {
+        grid-template-areas: 'card1' 'card2' 'card3' 'card4' 'card5';
+        height: auto;
+        padding: 50px 20px;
+        width: 80%;
+        gap: 25px;
+    }
+
+    .card1, .card2, .card3, .card4, .card5 {
+        padding: 30px;
+    }
+
+    .heading {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        font-size: 0.85rem;
+        line-height: 1.2rem;
+    }
+}  
+
+@media(max-width: 375px) {
+    .container {
+        width: 85%;
+    }
+
+    .quotes {
+        width: 27.5vw;
+        right: 7.5%;
+    }
+}
