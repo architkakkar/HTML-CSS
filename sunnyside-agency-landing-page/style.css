@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  color: hsl(0, 0%, 100%);
+  overflow-x: hidden;
+}
+
+/* Header Section */
+header {
+  background: url("images/mobile/image-header.jpg") no-repeat center
+    center/cover;
+  padding: 25px;
+  height: 82.5vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger-downshape {
+  position: absolute;
+  top: 12.1%;
+  right: 25px;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid hsl(0, 0%, 100%);
+  border-left: 30px solid transparent;
+  transition: opacity ease-in 200ms;
+  opacity: 0%;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: hsl(0, 0%, 100%);
+  top: 18%;
+  right: 25px;
+  padding: 50px 0 20px;
+  text-align: center;
+  width: calc(100vw - 50px);
+  transition: opacity ease-in 200ms;
+  opacity: 0%;
+}
+
+.show-dropdown {
+  opacity: 100%;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+ul li {
+  color: hsl(210, 4%, 67%);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+ul li:hover {
+  color: hsl(0, 0%, 0%);
+}
+
+.active {
+  background: hsl(51, 100%, 49%);
+  color: hsl(0, 0%, 0%);
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  font-size: 0.9rem;
+  padding: 15px 25px;
+  border-radius: 2rem;
+}
+
+.active:hover {
+  background: hsl(51, 99%, 46%);
+}
+
+header > h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.arrow {
+  padding-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Body Section */
+.section {
+  text-align: center;
+}
+
+.section > section {
+  padding: 60px 25px;
+}
+
+.image {
+  width: 100vw;
+  height: 320px;
+}
+
+.section-1 > .image {
+  background: url("images/mobile/image-transform.jpg") no-repeat center
+    center/cover;
+}
+
+.heading {
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.content {
+  color: hsl(232, 10%, 55%);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  padding: 30px 0;
+}
+
+.section button {
+  background: none;
+  border: none;
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1rem;
+  border-radius: 2.5px;
+  cursor: pointer;
+}
+
+.section-1 button {
+  border-bottom: 7.5px solid hsla(51, 100%, 49%, 0.374);
+}
+
+.section-1 button:hover {
+  border-bottom: 7.5px solid hsl(51, 100%, 49%);
+}
+
+.section-2 > .image {
+  background: url("images/mobile/image-stand-out.jpg") no-repeat center
+    center/cover;
+}
+
+.section-2 button {
+  border-bottom: 7.5px solid hsla(7, 99%, 70%, 0.374);
+}
+
+.section-2 button:hover {
+  border-bottom: 7.5px solid hsl(7, 99%, 70%);
+}
+
+.section-3,
+.section-4 {
+  height: 600px;
+  position: relative;
+}
+
+.section-3 > section,
+.section-4 > section {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 0;
+  top: 55%;
+  position: relative;
+}
+
+.section-3 {
+  background: url("images/mobile/image-graphic-design.jpg") no-repeat center
+    center/cover;
+}
+
+.section-3 .heading,
+.section-3 .content {
+  color: hsl(167, 40%, 24%);
+}
+
+.section-3 .content,
+.section-4 .content {
+  font-size: 1.02rem;
+}
+
+.section-4 {
+  background: url("images/mobile/image-photography.jpg") no-repeat center
+    center/cover;
+}
+
+.section-4 .heading,
+.section-4 .content {
+  color: hsl(198, 62%, 26%);
+}
+
+/* Testimonial Section */
+.testimonials-heading {
+  color: hsl(210, 4%, 67%);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 1.1rem;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.testimonials {
+  padding: 20px 25px 70px;
+  text-align: center;
+}
+
+.testimonial-section > img {
+  margin-top: 80px;
+  border-radius: 50%;
+  width: 65px;
+}
+
+.review {
+  color: hsl(213, 9%, 39%);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  padding-top: 25px;
+}
+
+.name {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+  font-size: 1.2rem;
+  padding-top: 30px;
+}
+
+.position {
+  color: hsl(210, 4%, 67%);
+  font-size: 0.92rem;
+  padding-top: 10px;
+}
+
+.image-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-section div {
+  height: 50vw;
+  width: 50vw;
+}
+
+.milkbottles {
+  background: url("images/mobile/image-gallery-milkbottles.jpg") no-repeat
+    center center/cover;
+}
+
+.orange {
+  background: url("images/mobile/image-gallery-orange.jpg") no-repeat center
+    center/cover;
+}
+
+.cone {
+  background: url("images/mobile/image-gallery-cone.jpg") no-repeat center
+    center/cover;
+}
+
+.sugar-cubes {
+  background: url("images/mobile/image-gallery-sugar-cubes.jpg") no-repeat
+    center center/cover;
+}
+
+/* Footer Section */
+.footer {
+  background-color: hsl(167 44% 70%);
+  color: hsl(167, 40%, 24%);
+  text-align: center;
+  padding: 60px 25px 0;
+}
+
+.footer > img {
+  width: 50vw;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0 60px;
+}
+
+.footer-links a {
+  color: hsl(168, 34%, 41%);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer a {
+  font-weight: 400;
+  color: hsl(167, 40%, 24%);
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 325px) {
+  header > h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 540px) {
+  .logo {
+    width: 30%;
+  }
+
+  header {
+    background: url("images/desktop/image-header.jpg") no-repeat center
+      center/cover;
+  }
+
+  header > h1 {
+    padding-top: 40px;
+    font-size: 3rem;
+  }
+
+  .arrow {
+    padding-top: 25px;
+  }
+
+  .arrow-down {
+    width: 5vw;
+  }
+
+  .image {
+    height: 380px;
+  }
+
+  .footer > img {
+    width: 40vw;
+  }
+
+  .section-3,
+  .section-4 {
+    height: 680px;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 100vh;
+  }
+
+  .logo {
+    width: 22.5%;
+  }
+
+  .hamburger,
+  .hamburger-downshape {
+    display: none;
+  }
+
+  .dropdown {
+    opacity: 1;
+    position: relative;
+    flex-direction: row;
+    padding: 0;
+    background: transparent;
+    width: auto;
+    right: auto;
+    top: auto;
+    gap: 30px;
+  }
+
+  ul li {
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .active {
+    background-color: hsl(0, 0%, 100%);
+    font-size: 0.85rem;
+  }
+
+  .active:hover {
+    background: rgba(255, 255, 255, 0.237);
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(10.2px);
+    color: hsl(0, 0%, 100%);
+  }
+
+  header > h1 {
+    padding-top: 70px;
+    font-size: 3.5rem;
+  }
+
+  .arrow {
+    padding-top: 35px;
+  }
+
+  .section-1,
+  .section-2 {
+    display: flex;
+  }
+
+  .section-1 {
+    flex-direction: row-reverse;
+  }
+
+  .section-1 > .image,
+  .section-2 > .image,
+  .section-1 > section,
+  .section-2 > section {
+    flex: 1;
+  }
+
+  .section-1 > .image {
+    background: url("images/desktop/image-transform.jpg") no-repeat center
+      center/cover;
+  }
+
+  .section-2 > .image {
+    background: url("images/desktop/image-stand-out.jpg") no-repeat center
+      center/cover;
+  }
+
+  .section-1 > section,
+  .section-2 > section {
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .heading,
+  .content,
+  .section button {
+    margin: 0 40px 0 70px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+
+  .section button {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .section-3,
+  .section-4 {
+    flex: 1;
+    height: 380px;
+  }
+
+  .section-3 {
+    background: url("images/desktop/image-graphic-design.jpg") no-repeat center
+      center/cover;
+  }
+
+  .section-4 {
+    background: url("images/desktop/image-photography.jpg") no-repeat center
+      center/cover;
+  }
+
+  .section-3 > section,
+  .section-4 > section {
+    padding: 0;
+    top: 60%;
+  }
+
+  .section-3 .heading,
+  .section-4 .heading {
+    font-size: 1.4rem;
+    margin: 0 50px;
+  }
+
+  .section-3 .content,
+  .section-4 .content {
+    font-size: 0.9rem;
+    margin: 0 50px;
+    padding: 15px 0;
+  }
+
+  .testimonials-heading {
+    font-size: 1.3rem;
+    padding-top: 100px;
+  }
+
+  .testimonials {
+    padding: 10px 60px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0 80px;
+  }
+
+  .review {
+    font-size: 0.925rem;
+  }
+
+  .name {
+    font-size: 1.05rem;
+  }
+
+  .position {
+    font-size: 0.8rem;
+  }
+
+  .image-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .image-section div {
+    height: 35vw;
+    width: 25vw;
+  }
+
+  .milkbottles {
+    background: url("images/mobile/image-gallery-milkbottles.jpg") no-repeat
+      center center/cover;
+  }
+  
+  .orange {
+    background: url("images/mobile/image-gallery-orange.jpg") no-repeat center
+      center/cover;
+  }
+  
+  .cone {
+    background: url("images/mobile/image-gallery-cone.jpg") no-repeat center
+      center/cover;
+  }
+  
+  .sugar-cubes {
+    background: url("images/mobile/image-gallery-sugar-cubes.jpg") no-repeat
+      center center/cover;
+  }
+
+  .footer > img {
+    width: 25vw;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    padding: 50px 0;
+  }
+}
+
+@media (min-width: 1124px) {
+  .logo {
+    width: 17.5%;
+  }
+
+  .dropdown {
+    gap: 50px;
+  }
+
+  header > h1 {
+    font-size: 3rem;
+  }
+
+  .arrow {
+    padding-top: 50px;
+  }
+
+  .arrow-down {
+    width: 3%;
+  }
+
+  .section-3,
+  .section-4 {
+    height: 400px;
+  }
+
+  .section-3 > section,
+  .section-4 > section {
+    top: 65%;
+  }
+
+  .footer > img {
+    width: 17.5vw;
+  } 
+}
